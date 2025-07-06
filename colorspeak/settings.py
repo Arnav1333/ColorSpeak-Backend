@@ -27,7 +27,7 @@ GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 SECRET_KEY = 'django-insecure-_bp&kj!v61*@yj5flxcy+guugw^2m+czf(n17932e78u3)vzoy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -119,11 +119,14 @@ USE_I18N = True
 
 USE_TZ = True
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+MIDDLEWARE.insert(0, 'corsheaders.middleware.CorsMiddleware')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
