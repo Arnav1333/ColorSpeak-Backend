@@ -30,7 +30,8 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://colorspeak.onrender.com','http://127.0.0.1:8000/']
+ALLOWED_HOSTS = ['colorspeak.onrender.com', '127.0.0.1', 'localhost']
+
 
 
 # Application definition
