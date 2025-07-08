@@ -5,6 +5,10 @@ from django.views.decorators.csrf import csrf_exempt
 import json
 
 @csrf_exempt
+def ping(request):
+    return JsonResponse({"status": "alive"})
+
+@csrf_exempt
 def suggest_colors(request):
     if request.method == 'POST':
         data = json.loads(request.body)
