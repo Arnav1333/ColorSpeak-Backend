@@ -60,7 +60,11 @@ MIDDLEWARE = [
     
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True 
+CORS_ALLOWED_ORIGINS = [
+    "https://colorspeak.xyz",
+    "https://colorspeak.netlify.app/",
+    
+]
 ROOT_URLCONF = 'colorspeak.urls'
 
 TEMPLATES = [
